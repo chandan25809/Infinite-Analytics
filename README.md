@@ -1,7 +1,22 @@
 ## Prerequisites
-
+- watch this demo [video](https://drive.google.com/file/d/16_gkWhLlDfck-9_b7k6FAGYi5CY4EwMu/view?usp=sharing)
 - Python 3.x
 - [Virtualenv](https://virtualenv.pypa.io/en/latest/)
+
+## Obtaining Google OAuth Credentials
+
+To use Google OAuth for authentication, you'll need to obtain credentials. Follow these steps:
+
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
+2. Create a new project (or select an existing one).
+3. In the left sidebar, navigate to "APIs & Services" > "Credentials."
+4. Click on "Create Credentials" and select "OAuth client ID."
+5. Configure the consent screen and application type.
+6. Add the authorized redirect URI (e.g., `http://localhost:8000/auth_app/auth`).
+7. After creating the OAuth client ID, copy the generated client ID and client secret.
+8. Update the `.env.test` file in the root of your project with the obtained credentials.
+
+Make sure to replace `YOUR_TEST_CLIENT_ID` and `YOUR_TEST_CLIENT_SECRET` in the `.env.test` file with the actual values you obtained.
 
 ## Setup
 
