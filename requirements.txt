@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+fastapi-authlib
+python-dotenv
+jinja2
+python-multipart
+websockets
+websocket-client
+requests

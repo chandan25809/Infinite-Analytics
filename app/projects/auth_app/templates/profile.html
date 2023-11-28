@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h4>{{user['family_name']}}'s Profile</h4>
+        <div class="img-box">
+          <img class="img" src="{{user['picture']}}" />
+        </div>
+      </div>
+      <p>Name: {{user['name']}}</p>
+      <p>Bio: {{user.get('bio', 'N/A')}}</p>
+      <p>Phone: {{user.get('phone', 'N/A')}}</p>
+      <p>Email: {{user['email']}}</p>
+
+      <a href="/auth_app/edit_profile">Update Profile</a>
+    </div>
+  </body>
+</html>

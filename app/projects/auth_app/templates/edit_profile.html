@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Profile Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h4>Edit Profile</h4>
+      </div>
+      <form action="/auth_app/update_profile" method="post">
+        <label for="picture">Picture:</label>
+        <textarea id="picture" name="picture">{{user.get('picture', '')}}</textarea>
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio">{{user.get('bio', '')}}</textarea>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" value="{{user.get('phone', '')}}">
+        <input type="submit" value="Save Changes">
+      </form>
+    </div>
+  </body>
+</html>
